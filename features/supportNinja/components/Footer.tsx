@@ -101,7 +101,7 @@ const Footer: React.FC<FooterProps> = ({
           </a>
         </div>
 
-        {/* Main Footer Links */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <FooterColumn title="Solutions" links={solutions} />
           <FooterColumn title="Industries" links={industries} />
@@ -111,8 +111,6 @@ const Footer: React.FC<FooterProps> = ({
         </div>
 
       
-        
-        
         <div className="pt-8 mt-8 border-t border-gray-200 flex flex-col md:flex-row md:justify-between">
           <div className="mb-4 md:mb-0">
             <p className="text-gray-600 text-sm">
