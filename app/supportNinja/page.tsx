@@ -116,9 +116,13 @@ const supportNinjaPage = () => {
 
       <ServicesSection />
       <TestimonialSlider />
-      <Spanning/>
-      <CustomApproach/>
-      <PeopleSection/>
+
+      <Spanning />
+
+      <CustomApproach />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <PeopleSection />
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <section className="flex flex-col-reverse items-center justify-between gap-[100] py-16 md:flex-row">
@@ -166,7 +170,6 @@ const supportNinjaPage = () => {
               </h1>
               <div className="space-y-4">
                 <p className="text-xl">Design a custom outsourcing solution that drives results.</p>
-                
               </div>
               <div>
                 <ButtonGetStarted />
