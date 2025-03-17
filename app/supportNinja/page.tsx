@@ -3,6 +3,8 @@ import SupportNinjaNavbar from "../../features/supportNinja/components/SupportNi
 import ServiceSelection from "features/supportNinja/components/Service"
 import ButtonGetStarted from "features/supportNinja/components/getstartButton"
 import Content from "features/supportNinja/components/Content"
+import ServicesSection from "features/supportNinja/components/ServiceSection"
+import TestimonialSlider from "features/supportNinja/components/Testimonials"
 
 const supportNinjaPage = () => {
   return (
@@ -97,6 +99,8 @@ const supportNinjaPage = () => {
         </div>
         <img className="" src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c4794ce4765_Illustration%3DPlant%201.svg" loading="lazy" alt="Illustration of green plant inside of red and white vase"></img>
       </main>
+        <ServicesSection/>
+        <TestimonialSlider/>
     </div>
   )
 }
