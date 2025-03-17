@@ -5,6 +5,7 @@ import ButtonGetStarted from "features/supportNinja/components/getstartButton"
 import Content from "features/supportNinja/components/Content"
 import ServicesSection from "features/supportNinja/components/ServiceSection"
 import TestimonialSlider from "features/supportNinja/components/Testimonials"
+import Footer from "features/supportNinja/components/Footer"
 
 const supportNinjaPage = () => {
   return (
@@ -101,6 +102,7 @@ const supportNinjaPage = () => {
       </main>
         <ServicesSection/>
         <TestimonialSlider/>
+        <Footer />
     </div>
   )
 }

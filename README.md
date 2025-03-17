@@ -1,6 +1,9 @@
 ขั้นตอนการใช้งาน
-1.เข้ามาให้โหลด npm i pnpm --global เพื่อใช้ pnpm
-2.ทำการ pnpm i เพื่อโหลด node_module
+1.ปรับ Termical เป็น Gitbash
+2.เข้ามาให้โหลด npm i pnpm --global เพื่อใช้ pnpm
+3.ทำการ pnpm i เพื่อโหลด node_module
+4.โหลด pnpm add lucide-react เพื่อการใช้ lucide icon
+5.pnpm run dev เพื่อเปิด development server
 
 
 ### Next.js Enterprise Boilerplate 
