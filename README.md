@@ -1,9 +1,27 @@
-ขั้นตอนการใช้งาน
-1.ปรับ Termical เป็น Gitbash
-2.เข้ามาให้โหลด npm i pnpm --global เพื่อใช้ pnpm
-3.ทำการ pnpm i เพื่อโหลด node_module
-4.โหลด pnpm add lucide-react เพื่อการใช้ lucide icon
-5.pnpm run dev เพื่อเปิด development server
+ขั้นตอนการใช้งาน (Improved Version):
+
+ตั้งค่า Terminal เป็น Git Bash
+เปลี่ยน Terminal ให้เป็น Git Bash เพื่อให้การใช้งานสะดวกยิ่งขึ้น
+
+ติดตั้ง pnpm
+ใช้คำสั่ง npm i pnpm --global เพื่อติดตั้ง pnpm ซึ่งจะใช้สำหรับการจัดการแพ็กเกจ
+
+ติดตั้ง Node Modules
+ใช้คำสั่ง pnpm i เพื่อดาวน์โหลด dependencies ทั้งหมดที่จำเป็นสำหรับโปรเจค
+
+เพิ่ม Lucide React Icons
+ใช้คำสั่ง pnpm add lucide-react เพื่อเพิ่มไอคอนจาก Lucide React สำหรับใช้งานในโปรเจค
+
+เปิด Development Server
+ใช้คำสั่ง pnpm run dev เพื่อเริ่มต้น development server และทดสอบโปรเจคในโหมดพัฒนา
+
+Build โปรเจคสำหรับ Production
+ใช้คำสั่ง pnpm run build เพื่อ build โปรเจคให้พร้อมสำหรับใช้งานในสภาพแวดล้อม production
+
+โครงสร้างโปรเจค
+หน้าหลักของโปรเจคจะอยู่ที่ src/supportNinja
+ส่วนของ components จะอยู่ที่ src/features/supportNinja/components
+การตั้งค่าและคำแนะนำเหล่านี้จะช่วยให้การพัฒนาโปรเจคเป็นไปอย่างราบรื่นและมีประสิทธิภาพมากขึ้น.
 
 
 ### Next.js Enterprise Boilerplate 
