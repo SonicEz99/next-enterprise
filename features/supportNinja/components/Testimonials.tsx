@@ -49,9 +49,9 @@ const TestimonialSlider: React.FC = () => {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
-      <h2 className="mb-10 text-center font-serif text-4xl text-gray-800 md:text-5xl">Why our clients stick with us</h2>
+      <h2 className="mb-10 text-center font-serif text-5xl text-gray-800 md:text-5xl">Why our clients stick with us</h2>
 
-      <div className="relative mx-auto max-w-4xl rounded-xl bg-orange-50 p-8 md:p-16">
+      <div className="relative mx-auto max-w-7xl rounded-xl bg-[#f7e1d2] p-8 md:p-16">
         <div className="absolute top-8 left-8 text-gray-300">
           <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 90 Q30 70 10 50 Q30 30 10 10" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -65,7 +65,7 @@ const TestimonialSlider: React.FC = () => {
           </svg>
         </div>
 
-        <div className="mb-10 text-center">
+        <div className="mb-10 text-center max-w-3xl mx-auto">
           <p className="mb-8 text-xl text-gray-700 italic md:text-2xl">"{testimonials[currentIndex]!.quote}"</p>
           <div>
             <p className="font-semibold text-gray-800">{testimonials[currentIndex]!.author}</p>

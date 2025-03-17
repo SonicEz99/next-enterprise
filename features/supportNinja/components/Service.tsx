@@ -27,31 +27,75 @@ const ServiceSelection = () => {
   };
 
   return (
-    <div className="w-full grid grid-cols-1 gap-10 justify-center bg-[#f5dfcf] p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-      {services.map((service) => (
-        <div
-          key={service.id}
-          className={`bg-[#fbeee6] gap-4 relative p-4 rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:bg-white shadow-xl ${
-            selected.includes(service.id) ? "shadow-xl opacity-100 bg-white" : "bg-[#fbeee6]"
-          } w-full mx-auto sm:w-72 md:w-50 lg:w-55`} // Set the width here
-          onClick={() => toggleSelection(service.id)}
-        >
-          {/* Selection Checkbox (Top Right) */}
-          <div className="absolute top-2 right-2 text-gray-700">
-            {selected.includes(service.id) ? (
-              <CheckSquare size={20} className="text-gray-700" />
-            ) : (
-              <Square size={20} />
-            )}
+    <div className="w-full bg-[#f5dfcf] p-6">
+      <div className="grid grid-cols-1 gap-6 sm:hidden">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className={`bg-[#fbeee6] relative p-4 rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:bg-white shadow-xl ${
+              selected.includes(service.id) ? "shadow-xl opacity-100 bg-white" : "bg-[#fbeee6]"
+            }`}
+            onClick={() => toggleSelection(service.id)}
+          >
+            <div className="absolute top-2 right-2 text-gray-700">
+              {selected.includes(service.id) ? (
+                <CheckSquare size={20} className="text-gray-700" />
+              ) : (
+                <Square size={20} />
+              )}
+            </div>
+
+            <img src={service.image} alt={service.title} className="w-full h-28 object-contain mb-4" />
+            <h3 className="text-center font-semibold">{service.title}</h3>
           </div>
+        ))}
+      </div>
 
-          {/* Image Placeholder */}
-          <img src={service.image} alt={service.title} className="w-full h-28 object-contain mb-4 opacity-100" />
+      <div className="hidden sm:flex md:gap-6 overflow-x-auto xl:hidden">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className={`bg-[#fbeee6] flex-shrink-0 relative p-4 rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:bg-white shadow-xl ${
+              selected.includes(service.id) ? "shadow-xl opacity-100 bg-white" : "bg-[#fbeee6]"
+            } w-[250px]`}
+            onClick={() => toggleSelection(service.id)}
+          >
+            <div className="absolute top-2 right-2 text-gray-700">
+              {selected.includes(service.id) ? (
+                <CheckSquare size={20} className="text-gray-700" />
+              ) : (
+                <Square size={20} />
+              )}
+            </div>
 
-          {/* Title */}
-          <h3 className="text-center font-semibold">{service.title}</h3>
-        </div>
-      ))}
+            <img src={service.image} alt={service.title} className="w-full h-28 object-contain mb-4" />
+            <h3 className="text-center font-semibold">{service.title}</h3>
+          </div>
+        ))}
+      </div>
+
+      <div className="hidden xl:grid xl:grid-cols-6 xl:gap-6">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className={`bg-[#fbeee6] relative p-4 rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:bg-white shadow-xl ${
+              selected.includes(service.id) ? "shadow-xl opacity-100 bg-white" : "bg-[#fbeee6]"
+            }`}
+            onClick={() => toggleSelection(service.id)}
+          >
+            <div className="absolute top-2 right-2 text-gray-700">
+              {selected.includes(service.id) ? (
+                <CheckSquare size={20} className="text-gray-700" />
+              ) : (
+                <Square size={20} />
+              )}
+            </div>
+
+            <img src={service.image} alt={service.title} className="w-full h-28 object-contain mb-4" />
+            <h3 className="text-center font-semibold">{service.title}</h3>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
