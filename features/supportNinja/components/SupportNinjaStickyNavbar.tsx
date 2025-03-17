@@ -80,18 +80,23 @@ const SupportNinjaStickyNavbar = () => {
 }
 
 /** DROPDOWN COMPONENT */
-const Dropdown = ({ items }) => {
-  return (
-    <ul className="absolute left-0 z-50 mt-2 w-48 p-5 rounded-md bg-white opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">
-      {items.map((item, index) => (
-        <li key={index} className="border-b px-4 py-2 last:border-none hover:bg-gray-100">
-          <a href="#" className="block">
-            {item}
-          </a>
-        </li>
-      ))}
-    </ul>
-  )
-}
+interface DropdownProps {
+    items: string[];
+  }
+  
+  const Dropdown: React.FC<DropdownProps> = ({ items }) => {
+    return (
+      <ul className="absolute left-0 z-50 mt-2 w-48 p-5 rounded-md bg-white opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">
+        {items.map((item, index) => (
+          <li key={index} className="border-b px-4 py-2 last:border-none hover:bg-gray-100">
+            <a href="#" className="block">
+              {item}
+            </a>
+          </li>
+        ))}
+      </ul>
+    );
+  };
+  
 
 export default SupportNinjaStickyNavbar

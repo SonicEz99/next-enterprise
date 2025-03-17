@@ -95,7 +95,7 @@ const supportNinjaPage = () => {
             </p>
           </div>
         </div>
-        <img className="" src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c4794ce4765_Illustration%3DPlant%201.svg" loading="lazy" alt="Illustration of green plant inside of red and white vase" class="do-not-shrink"></img>
+        <img className="" src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c4794ce4765_Illustration%3DPlant%201.svg" loading="lazy" alt="Illustration of green plant inside of red and white vase"></img>
       </main>
     </div>
   )
