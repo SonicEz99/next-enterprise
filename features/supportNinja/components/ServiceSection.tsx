@@ -15,7 +15,7 @@ const ServiceCard = ({
   linkText: string
 }) => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 w-full rounded-xl">
       <div className="flex-shrink-0">{icon}</div>
       <div className="flex flex-col">
         <h3 className="mb-2 text-xl font-medium text-gray-800">{title}</h3>
@@ -130,7 +130,7 @@ const ServicesSection: React.FC = () => {
   ]
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16">
+    <section className="mx-auto py-16">
       <motion.div
         initial="hidden"
         whileInView="visible"

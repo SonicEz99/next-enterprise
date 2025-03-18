@@ -24,20 +24,20 @@ export default function CustomApproach() {
   const [selectedTab, setSelectedTab] = useState<keyof typeof steps>("Management-as-a-Service")
 
   return (
-    <div className="w-full bg-[#bfc1b9]">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+    <div className="font-san mx-auto w-full px-4 bg-[#bfc1b9]">
+      <div className="container mx-auto sm:px-6">
         <hr />
-        <div className="flex flex-col gap-6 px-4 py-8 sm:gap-8 sm:p-8 md:flex-row md:gap-10 md:p-10">
-          {/* Left Column - Shows on md and up */}
+        <div className="flex flex-col gap-6 px-4 py-8 sm:gap-8 sm:p-8 md:flex-col md:gap-10 md:p-10 xl:flex-row">
+          
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
-            className="md:block md:w-1/2"
+            className="lg:block lg:w-1/2 mx-auto"
           >
             <h2 className="font-serif max-w-xl mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-              Our customized <br className="hidden sm:block" /> approach
+              Our customized <br className="hidden sm:block md:block lg:block" /> approach
             </h2>
             <p className="mt-4 max-w-xl mx-auto text-base text-gray-700 sm:text-lg">
               We tailor our strategies and services based on your roadblocks and needs, delivering a strategic
@@ -45,14 +45,14 @@ export default function CustomApproach() {
             </p>
           </motion.div>
 
-          {/* Mobile Design */}
-          <div className="w-full max-w-xl mx-auto mx-automd:w-1/2">
+          
+          <div className="w-full max-w-xl mx-auto md:w-full sm:block md:block lg:block ">
             <h3 className="mb-5 text-lg font-semibold">Get set up in 5 easy steps</h3>
-            <div className="mb-6 flex flex-row gap-2 overflow-x-auto">
+            <div className="mb-6 flex flex-row gap-2 overflow-x-auto ">
               {Object.keys(steps).map((tab) => (
                 <button
                   key={tab}
-                  className={`rounded-full px-4 py-2 text-sm whitespace-nowrap ${
+                  className={`rounded-full px-4 py-2 text-sm whitespace-nowrap w-full ${
                     selectedTab === tab ? "bg-white text-black" : "bg-white/30 text-black"
                   }`}
                   onClick={() => setSelectedTab(tab as keyof typeof steps)}

@@ -2,14 +2,14 @@ import Image from "next/image"
 import React from "react"
 const PeopleSection: React.FC = () => {
   return (
-    <div className="container mx-auto max-w-7xl">
-      <div className="flex flex-col gap-8 px-8 pt-16 md:mx-8 md:flex-col lg:flex-row">
-        <div className="w-2/2 space-y-4 md:w-2/2 lg:w-1/2">
+    <div className="mx-auto w-full">
+      <div className="flex flex-col gap-8  pt-16 md:mx-8 md:flex-col lg:flex-row">
+        <div className="w-2/2 space-y-4 md:w-2/2 lg:w-1/2 lg:mr-12 xl:mr-12">
           <h2 className="font-serif text-4xl text-gray-900 md:text-6xl">
             We're passionate about our <span className="italic">people</span>.
           </h2>
-          <p className="font-medium text-gray-900">Our people-first culture attracts and retains top talent.</p>
-          <p className="text-gray-600">
+          <p className="text-xl text-gray-900">Our people-first culture attracts and retains top talent.</p>
+          <p className="text-gray-600 text-xl">
             For nearly a decade, we've fostered the growth, well-being, and career development of our team members — and
             that's earned us industry-high talent retention rates.
           </p>
@@ -17,7 +17,7 @@ const PeopleSection: React.FC = () => {
             Read our story
           </button>
         </div>
-        <div className="relative h-[500px] w-2/2 md:mx-12 md:w-[100%] lg:w-1/2">
+        <div className="relative h-[500px] w-2/2 md:mx-12 md:w-[100%] lg:w-1/2 lg:ml-12 xl:ml-12">
           <div className="absolute top-0 left-0 h-25 w-25 overflow-hidden rounded-2xl bg-[#b9bbb4] shadow-lg md:h-50 md:w-50 lg:h-45 lg:w-45">
             <img
               src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c1677ce47c0_Tile__Man.webp"
