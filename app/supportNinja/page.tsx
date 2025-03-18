@@ -223,8 +223,9 @@ const supportNinjaPage = () => {
                 className="h-full w-full rounded-lg bg-[#f7e1d2] object-contain shadow-lg"
               />
             </div>
-          </motion.div>
-          <motion.div variants={fadeInUp} className="w-full space-y-6 px-4 md:max-w-2xl xl:w-1/2">
+          </motion.div> 
+          
+          <motion.div variants={fadeInUp} className="w-full  space-y-6 px-4  md:max-w-2xl xl:w-1/2">
             <motion.h1
               variants={fadeInUp}
               className="font-serif text-4xl font-light sm:text-5xl md:text-6xl lg:ml-12 xl:ml-12"
