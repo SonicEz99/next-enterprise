@@ -62,13 +62,12 @@ const supportNinjaPage = () => {
               </motion.h3>
               <motion.h1
                 variants={fadeInUp}
-                className="w-full max-w-7xl font-serif text-5xl font-thin sm:text-4xl md:max-w-xl md:text-6xl lg:text-7xl xl:max-w-7xl xl:text-7xl"
+                className="w-full  max-w-7xl font-serif text-5xl font-thin sm:text-4xl md:max-w-xl md:text-6xl lg:text-7xl xl:max-w-7xl xl:text-7xl"
               >
                 Outsourcing worth talking about
               </motion.h1>
             </motion.div>
           </motion.section>
-
           <hr className="container mx-auto mt-6 mb-8 border-t border-[#bfc1b9]" />
 
           <section className="py-8">
