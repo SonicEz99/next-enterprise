@@ -2,7 +2,7 @@ import Image from "next/image"
 import React from "react"
 const PeopleSection: React.FC = () => {
   return (
-    <div className="mx-auto w-full">
+    <div className="">
       <div className="flex flex-col gap-8  pt-16 md:mx-8 md:flex-col lg:flex-row">
         <div className="w-2/2 space-y-4 md:w-2/2 lg:w-1/2 lg:mr-12 xl:mr-12">
           <h2 className="font-serif text-4xl text-gray-900 md:text-6xl">

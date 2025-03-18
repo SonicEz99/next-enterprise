@@ -173,7 +173,7 @@ const SupportNinjaStickyNavbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-1/2 z-50 mt-15 flex w-full max-w-[1675px] -translate-x-1/2 items-center justify-between px-10 py-6 transition-all duration-300 ${
+      className={`fixed top-0 left-1/2 z-50 mt-15 flex w-full max-w-[1500px] sm:max-w-[900px] md:max-w-[800px] lg:max-w-[1700px] xl:max-w-[1700px]  -translate-x-1/2 items-center justify-between px-10 py-6 transition-all duration-300 ${
         scrolled ? "mt-[5]" : ""
       }`}
     >
@@ -193,12 +193,12 @@ const SupportNinjaStickyNavbar = () => {
 
       {/* Desktop Navigation Menu */}
       <ul
-        className={`hidden space-x-8 font-semibold text-black lg:flex lg:hidden xl:flex ${
+        className={`hidden space-x-8 font-semibold text-black lg:flex lg:hidden xl:flex pr-30 ${
           scrolled ? "rounded-full bg-white px-8 py-4 border border-[#d5d2d2]" : ""
         }`}
       >
         <li
-          className="group relative"
+          className="group relative "
           onMouseEnter={() => handleDropdownToggle("solutions")}
           onMouseLeave={() => handleDropdownToggle("solutions")}
         >
@@ -267,8 +267,8 @@ const SupportNinjaStickyNavbar = () => {
               <X width={40} height={40} />
             </button>
           </div>
-          <ul className="mt-20 space-y-4 font-semibold text-black">
-            <li className="font-sans">
+          <ul className="mt-20 space-y-4 font-semibold text-black ">
+            <li className="font-sans ">
               <a href="#" className="mt-3 flex items-center justify-between">
                 <h1 className="text-xl">Solutions</h1>
               </a>

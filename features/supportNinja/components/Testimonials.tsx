@@ -50,7 +50,7 @@ const TestimonialSlider: React.FC = () => {
   ]
 
   return (
-    <section className="mx-auto max-w-7xl px-4">
+    <section className="mx-auto max-w-7xl ">
       <h2 className="mb-10 text-center font-serif text-5xl text-gray-800 md:text-5xl">Why our clients stick with us</h2>
 
       <div className="relative mx-auto max-w-7xl rounded-xl bg-[#f7e1d2] p-8 md:p-16">
@@ -82,14 +82,14 @@ const TestimonialSlider: React.FC = () => {
           <div className="mx-auto flex overflow-hidden rounded-full bg-[#0c3a23] md:mx-0">
             <button
               onClick={goToPrevious}
-              className="cursor-pointer p-3 px-4 text-white transition-colors hover:text-[#edbc4f]"
+              className="cursor-pointer p-3  text-white transition-colors hover:text-[#edbc4f]"
               aria-label="Previous testimonial"
             >
               <ArrowLeft width={16} height={16} />
             </button>
             <button
               onClick={goToNext}
-              className="cursor-pointer p-3 px-4 text-white transition-colors hover:text-[#edbc4f]"
+              className="cursor-pointer p-3  text-white transition-colors hover:text-[#edbc4f]"
               aria-label="Next testimonial"
             >
               <ArrowRight width={16} height={16} />

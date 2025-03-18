@@ -83,7 +83,7 @@ const Footer: React.FC<FooterProps> = ({ companyName = "SupportNinja", year = 20
 
   return (
     <footer className="w-full border-t border-gray-200 bg-[#bfc1b9] py-12 min-h-[500px]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto ">
         <div className="mb-10">
           <a href="/" className="flex items-center">
             <img

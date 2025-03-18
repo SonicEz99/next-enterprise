@@ -55,19 +55,19 @@ const ServiceSelection = () => {
   }
 
   return (
-    <div className="container mx-auto w-full bg-[#f5dfcf]">
-      <div className="grid grid-cols-1 gap-6 sm:hidden">
+    <div className="w-full bg-[#f5dfcf]">
+      <div className="grid grid-cols-1 gap-4 sm:hidden">
         {services.map((service) => (
           <div
             key={service.id}
-            className={`relative cursor-pointer rounded-xl bg-[#fbeee6] p-4 shadow-md shadow-xl transition-all duration-300 hover:bg-white ${
-              selected.includes(service.id) ? "bg-white opacity-100 shadow-xl" : "bg-[#fbeee6]"
+            className={`relative cursor-pointer rounded-xl bg-[#fbeee6] p-4 transition-all duration-300 hover:bg-white ${
+              selected.includes(service.id) ? "bg-white opacity-100 " : "bg-[#fbeee6]"
             }`}
             onClick={() => toggleSelection(service.id)}
           >
             <div className="flex items-center space-x-4 font-bold">
               <img src={service.image} alt={service.title} className="h-16 w-16 object-contain" />
-              <h3 className="flex-1 font-bold">{service.title}</h3>
+              <h3 className="flex-1 font-bold text-xl">{service.title}</h3>
               <div className="text-gray-700">
                 {selected.includes(service.id) ? (
                   <CheckSquare size={20} className="text-gray-700" />
@@ -84,8 +84,8 @@ const ServiceSelection = () => {
         {services.map((service) => (
           <div
             key={service.id}
-            className={`relative flex-shrink-0 cursor-pointer rounded-xl bg-[#fbeee6] p-4 shadow-md shadow-xl transition-all duration-300 hover:bg-white ${
-              selected.includes(service.id) ? "bg-white opacity-100 shadow-xl" : "bg-[#fbeee6]"
+            className={`relative flex-shrink-0 cursor-pointer rounded-xl bg-[#fbeee6] p-4  transition-all duration-300 hover:bg-white ${
+              selected.includes(service.id) ? "bg-white opacity-100 " : "bg-[#fbeee6]"
             } w-[250px]`}
             onClick={() => toggleSelection(service.id)}
           >
@@ -120,21 +120,21 @@ const ServiceSelection = () => {
         {services.map((service) => (
           <div
             key={service.id}
-            className={`relative cursor-pointer rounded-xl bg-[#fbeee6] p-4 shadow-md shadow-xl transition-all duration-300 hover:bg-white ${
-              selected.includes(service.id) ? "bg-white opacity-100 shadow-xl" : "bg-[#fbeee6]"
+            className={`relative cursor-pointer rounded-xl bg-[#fbeee6] p-4  transition-all duration-300 hover:bg-white ${
+              selected.includes(service.id) ? "bg-white opacity-100 " : "bg-[#fbeee6]"
             }`}
             onClick={() => toggleSelection(service.id)}
           >
-            <div className="absolute top-2 right-2 text-gray-700">
+            <div className="absolute top-2 right-2 font-semibold text-gray-700">
               {selected.includes(service.id) ? (
-                <CheckSquare size={20} className="text-gray-700" />
+                <CheckSquare size={20} className="text-gray-700 font-semibold" />
               ) : (
                 <Square size={20} />
               )}
             </div>
 
-            <img src={service.image} alt={service.title} className="mb-4 h-28 w-full object-contain" />
-            <h3 className="text-center font-semibold">{service.title}</h3>
+            <img src={service.image} alt={service.title} className="mb-4 h-32 w-full object-contain" />
+            <h3 className="text-center font-bold">{service.title}</h3>
           </div>
         ))}
       </div>

@@ -16,9 +16,14 @@ function Content() {
         variants={fadeInUp}
         className="flex items-center justify-center p-4 xl:w-1/3 xl:justify-start"
       >
-        <h2 className="text-center text-2xl font-light text-gray-800 xl:text-left">
+        <h2 className="text-center text-lg font-light text-gray-800 block sm:block md:hidden lg:hidden xl:hidden">
           <b>
-            Driving better business results <br /> for 200+ companies.
+            Driving better business results  for <br />200+ companies.
+          </b>
+        </h2>
+        <h2 className="text-center text-2xl font-light text-gray-800 hidden sm:hidden md:block lg:block lg:block xl:text-left">
+          <b>
+            Driving better business results  <br /> for 200+ companies.
           </b>
         </h2>
       </motion.div>
@@ -66,7 +71,7 @@ function Content() {
           alt="Company Logo"
           width={100}
           height={50}
-          className="h-6 w-26 object-contain sm:h-8"
+          className="h-6 w-22 object-contain sm:h-8"
         />
       </motion.div>
     </motion.div>
