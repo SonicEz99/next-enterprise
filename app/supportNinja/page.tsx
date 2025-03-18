@@ -1,3 +1,4 @@
+"use client"
 import SupportNinjaStickyNavbar from "features/supportNinja/components/SupportNinjaStickyNavbar"
 import SupportNinjaNavbar from "../../features/supportNinja/components/SupportNinjaNavbar"
 import ServiceSelection from "features/supportNinja/components/Service"
@@ -6,9 +7,34 @@ import Content from "features/supportNinja/components/Content"
 import ServicesSection from "features/supportNinja/components/ServiceSection"
 import TestimonialSlider from "features/supportNinja/components/Testimonials"
 import Footer from "features/supportNinja/components/Footer"
-import Spanning from "features/supportNinja/components/Spining"
+import Spanning from "features/supportNinja/components/Spinning"
 import CustomApproach from "features/supportNinja/components/CustomApproach"
 import PeopleSection from "features/supportNinja/components/Peoplesection"
+import { motion } from "framer-motion"
+import { useInView } from "framer-motion"
+import { useRef } from "react"
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+}
+
+const staggerChildren = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+}
 
 const supportNinjaPage = () => {
   return (
@@ -17,17 +43,32 @@ const supportNinjaPage = () => {
       <SupportNinjaNavbar />
       <main className="bg-[#f7e1d2] pt-20 md:pt-24">
         <div className="container mx-auto px-8 sm:px-6 lg:px-8">
-          <section className="py-12 md:py-16 lg:py-20">
-            <div className="flex flex-col items-center justify-center text-center">
-              <h3 className="font-tenon mb-4 max-w-4xl text-lg leading-relaxed font-[550] text-[#474546] sm:text-xl md:text-3xl">
+          <motion.section 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerChildren}
+            className="py-12 md:py-16 lg:py-20"
+          >
+            <motion.div 
+              variants={fadeInUp}
+              className="flex flex-col items-center justify-center text-center"
+            >
+              <motion.h3 
+                variants={fadeInUp}
+                className="font-tenon mb-4 max-w-4xl text-lg leading-relaxed font-[550] text-[#474546] sm:text-xl md:text-3xl"
+              >
                 Quickly and seamlessly scale your team with agile, highly customizable outsourcing solutions that power
                 your growth.
-              </h3>
-              <h1 className="font-ivypresto w-full font-serif text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl">
+              </motion.h3>
+              <motion.h1 
+                variants={fadeInUp}
+                className="font-ivypresto w-full font-serif text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl"
+              >
                 Outsourcing worth talking about
-              </h1>
-            </div>
-          </section>
+              </motion.h1>
+            </motion.div>
+          </motion.section>
 
           <hr className="mx-auto mt-6 mb-8 max-w-7xl border-t border-gray-300" />
 
@@ -131,8 +172,14 @@ const supportNinjaPage = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <section className="flex flex-col-reverse items-center justify-between gap-[100]  md:flex-row">
-          <div className="w-full md:w-1/2">
+        <motion.section 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerChildren}
+          className="flex flex-col-reverse items-center justify-between gap-[100]  md:flex-row"
+        >
+          <motion.div variants={fadeInUp} className="w-full md:w-1/2">
             <img
               src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%20Image__Conference%20Room.webp"
               alt=""
@@ -140,26 +187,32 @@ const supportNinjaPage = () => {
               srcSet="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%2520Image__Conference%2520Room-p-500.webp 500w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%2520Image__Conference%2520Room-p-800.webp 800w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%2520Image__Conference%2520Room-p-1080.webp 1080w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%2520Image__Conference%2520Room-p-1600.webp 1600w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%20Image__Conference%20Room.webp 1720w"
               className="w-full rounded-lg object-cover"
             />
-          </div>
-          <div className="w-full space-y-6 sm:space-y-1 md:w-1/2">
-            <h1 className="font-serif font-[200] text-4xl sm:text-5xl md:text-6xl">
+          </motion.div>
+          <motion.div 
+            variants={fadeInUp}
+            className="w-full space-y-6 sm:space-y-1 md:w-1/2"
+          >
+            <motion.h1 
+              variants={fadeInUp}
+              className="font-serif font-[200] text-4xl sm:text-5xl md:text-6xl"
+            >
               Grow your career and unleash your potential.
-            </h1>
-            <div className="space-y-4 sm:space-y-1">
+            </motion.h1>
+            <motion.div variants={fadeInUp} className="space-y-4 sm:space-y-1">
               <p className="font-medium text-gray-900">Ready to expand your horizons at a truly global company?</p>
               <p className=" text-gray-900">
                 Your dedicated new team members will become experts in your world — your customers, your tech, your
                 data, your systems — so they can expand on what you've built.
               </p>
-            </div>
+            </motion.div>
             <div>
               <button className="w-auto mt-5 rounded-full border-2 border-[#0c3a23] bg-[#0c3a23] px-4 py-2 font-medium text-white transition-all duration-300 hover:cursor-pointer hover:bg-transparent hover:text-[#0c3a23]">
                 {" "}
                 View Open roles
               </button>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
       </div>
 
       <img

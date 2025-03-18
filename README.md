@@ -10,7 +10,10 @@
 ใช้คำสั่ง pnpm i เพื่อดาวน์โหลด dependencies ทั้งหมดที่จำเป็นสำหรับโปรเจค
 
 เพิ่ม Lucide React Icons
-ใช้คำสั่ง pnpm add lucide-react เพื่อเพิ่มไอคอนจาก Lucide React สำหรับใช้งานในโปรเจค
+ใช้คำสั่ง pnpm add lucide-react เพื่อเพิ่มไอคอนจาก Lucide React 
+สำหรับใช้งานในโปรเจค
+ใช้คำสั่ง pnpm i framer-motion animation
+สำหรับใช้งานในโปรเจค
 
 เปิด Development Server
 ใช้คำสั่ง pnpm run dev เพื่อเริ่มต้น development server และทดสอบโปรเจคในโหมดพัฒนา
