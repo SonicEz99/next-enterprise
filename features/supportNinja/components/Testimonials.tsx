@@ -48,7 +48,7 @@ const TestimonialSlider: React.FC = () => {
   ]
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16">
+    <section className="mx-auto max-w-7xl px-4">
       <h2 className="mb-10 text-center font-serif text-5xl text-gray-800 md:text-5xl">Why our clients stick with us</h2>
 
       <div className="relative mx-auto max-w-7xl rounded-xl bg-[#f7e1d2] p-8 md:p-16">

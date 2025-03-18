@@ -179,7 +179,7 @@ const SupportNinjaStickyNavbar = () => {
       }`}
     >
       <div
-        className={`flex gap-5 text-xl font-bold transition-opacity duration-300 ${
+        className={`flex gap-5 text-xl font-bold transition-opacity duration-300  ${
           scrolled ? "invisible opacity-0" : "opacity-100"
         }`}
       >
@@ -188,13 +188,13 @@ const SupportNinjaStickyNavbar = () => {
           width="200"
           height="200"
           alt="Support Ninja Logo"
-          className="h-11 w-auto"
+          className=" w-40 h-18 sm:w-38 sm:h-12 lg:w-3xs"
         />
       </div>
 
       {/* Desktop Navigation Menu */}
       <ul
-        className={`hidden space-x-8 font-semibold text-black lg:flex ${
+        className={`hidden space-x-8 font-semibold text-black lg:flex lg:hidden xl:flex ${
           scrolled ? "rounded-full bg-white px-8 py-4" : ""
         }`}
       >
@@ -250,11 +250,11 @@ const SupportNinjaStickyNavbar = () => {
         </li>
       </ul>
 
-      <button className="hidden rounded-full bg-[#0c3a23] px-7 py-3 font-sans text-xl font-semibold text-white lg:block">
+      <button className="hidden lg:hidden xl:flex rounded-full bg-[#0c3a23] px-7 py-3 font-sans text-xl font-semibold text-white lg:block">
         Get Started
       </button>
 
-      <div className="relative flex items-center lg:hidden">
+      <div className="relative flex items-center xl:hidden">
         {/* Hamburger Icon */}
         <button onClick={toggleMobileMenu} className="z-50 text-[#0c3a23] focus:outline-none">
           {mobileMenuOpen ? <X width={40} height={40} /> : <Menu width={40} height={40} />}

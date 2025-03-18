@@ -2,7 +2,7 @@ import React from "react"
 
 const PeopleSection: React.FC = () => {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-16 md:flex-row">
+    <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 mt-15 md:flex-row">
       {/* Text Content */}
       <div className="space-y-4 md:w-1/2">
         <h2 className="font-serif text-4xl text-gray-900 md:text-6xl">

@@ -29,6 +29,9 @@ module.exports = {
         },
       },
       fontFamily: {
+        tenon: ["Tenon", "sans-serif"], 
+        ivypresto: ["ivypresto-headline", "sans-serif"],
+      
         body: [
           "Inter",
           "ui-sans-serif",

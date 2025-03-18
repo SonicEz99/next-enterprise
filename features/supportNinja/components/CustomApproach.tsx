@@ -23,27 +23,28 @@ export default function CustomApproach() {
 
   return (
     <div className="w-full bg-[#bfc1b9]">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6">
         <hr />
-        <div className="flex flex-col gap-10 p-10 md:flex-row">
-          <div className="md:w-1/2">
-            <h2 className="font-serif text-6xl">
-              Our customized <br /> approach
+        <div className="flex flex-col gap-6 px-4 py-8 sm:gap-8 sm:p-8 md:flex-row md:gap-10 md:p-10">
+          {/* Left Column - Shows on md and up */}
+          <div className="md:block md:w-1/2">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+              Our customized <br className="hidden sm:block" /> approach
             </h2>
-            <p className="mt-4 max-w-md text-gray-700">
+            <p className="mt-4 max-w-md text-base text-gray-700 sm:text-lg">
               We tailor our strategies and services based on your roadblocks and needs, delivering a strategic
               outsourcing playbook — inclusive of technology, talent, and timing — that drives your business forward.
             </p>
           </div>
 
-          <div className="md:w-1/2">
-            <h3 className="mb-4 text-lg font-semibold">Get set up in 5 easy steps</h3>
-
-            <div className="mb-6 flex space-x-5">
+          {/* Mobile Design */}
+          <div className="w-full md:w-1/2">
+            <h3 className="mb-5 text-lg font-semibold">Get set up in 5 easy steps</h3>
+            <div className="mb-6 flex flex-row gap-2 overflow-x-auto">
               {Object.keys(steps).map((tab) => (
                 <button
                   key={tab}
-                  className={`cursor-pointer rounded-full px-4 py-2 text-lg ${
+                  className={`rounded-full px-4 py-2 text-sm whitespace-nowrap ${
                     selectedTab === tab ? "bg-white text-black" : "bg-white/30 text-black"
                   }`}
                   onClick={() => setSelectedTab(tab as keyof typeof steps)}
@@ -53,18 +54,23 @@ export default function CustomApproach() {
               ))}
             </div>
 
-            <div className="space-y-4">
-              {steps[selectedTab].map((step, index) => (
-                <div key={index} className="flex max-w-xl items-start space-x-6">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border bg-white font-bold text-gray-800">
-                    {index + 1}
+            <div className="relative">
+              {/* Vertical line connecting steps */}
+              <div className="absolute top-4 left-3 h-[calc(100%-40px)] w-0.5 bg-gray-300"></div>
+
+              <div className="space-y-8">
+                {steps[selectedTab].map((step, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="z-10 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-gray-800">
+                      {index + 1}
+                    </div>
+                    <p className="ml-4 font-sans text-sm">{step}</p>
                   </div>
-                  <p className="font-sans text-black">{step}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
-            <button className="mt-15 w-[100%] rounded-full border-2 border-[#0c3a23] bg-[#0c3a23] px-4 py-2 font-medium text-white transition-all duration-300 hover:cursor-pointer hover:bg-transparent hover:text-black">
+            <button className="mt-10 w-full rounded-full border-2 border-[#0c3a23] bg-[#0c3a23] py-3 font-medium text-white transition-all duration-300 hover:cursor-pointer hover:bg-transparent hover:text-black">
               View details
             </button>
           </div>

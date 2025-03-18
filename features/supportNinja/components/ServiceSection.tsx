@@ -13,23 +13,25 @@ const ServiceCard = ({
   linkText: string
 }) => {
   return (
-    <div className="flex flex-col">
-      <div className="mb-4">{icon}</div>
-      <h3 className="mb-2 text-xl font-medium text-gray-800">{title}</h3>
-      <p className="mb-4 text-gray-600">{description}</p>
-      <div className="mt-auto">
-        <a href="#" className="group flex items-center font-medium text-gray-700 hover:text-gray-900">
-          {linkText}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
+    <div className="flex gap-4 ">
+      <div className="flex-shrink-0">{icon}</div>
+      <div className="flex flex-col">
+        <h3 className="mb-2 text-xl font-medium text-gray-800">{title}</h3>
+        <p className="mb-4 text-gray-600">{description}</p>
+        <div className="mt-auto">
+          <a href="#" className="group flex items-center font-medium text-gray-700 hover:text-gray-900">
+            {linkText}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   )
@@ -39,21 +41,9 @@ const ServicesSection: React.FC = () => {
   const services = [
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-            />
-          </svg>
+        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
+          
+          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/6734db6b63d29b612d1a8d19_Icons_Customer-Support.svg" alt="" />
         </div>
       ),
       title: "Customer Support",
@@ -63,21 +53,8 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-            />
-          </svg>
+        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
+          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0c6675ce474a_Solutions%20Icon__Customer%20Service.svg" alt="" />
         </div>
       ),
       title: "Customer Experience",
@@ -87,21 +64,8 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            />
-          </svg>
+        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
+          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0cb1f3ce472c_Solutions%20Icon__Technical%20Support.svg" alt="" />
         </div>
       ),
       title: "Technical Customer Support",
@@ -110,21 +74,8 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-            />
-          </svg>
+        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
+          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0ca966ce478f_icons%3DPencil.svg" alt="" />
         </div>
       ),
       title: "Content Moderation",
@@ -133,21 +84,8 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-            />
-          </svg>
+        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
+          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0c1b4ace4778_icons%3DData%20Processing.svg" alt="" />
         </div>
       ),
       title: "Data Processing",
@@ -156,21 +94,8 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-700"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
+        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
+          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/66ab870287012990781761c9_66a94bdb23f9b933553ccdb1_Untitled%2520design%2520(40)%2520(1).png" alt="" />
         </div>
       ),
       title: "Finance & Accounting",

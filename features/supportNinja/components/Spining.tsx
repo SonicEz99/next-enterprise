@@ -55,24 +55,24 @@ function Spanning() {
   return (
     <div className="relative flex w-full justify-center bg-[url('/bg/wave-haikei-2.svg')] bg-cover bg-top pb-[100px] text-center">
       <div className="container flex justify-center">
-        <div className="flex max-w-lg flex-col justify-center pt-[350px]">
-          <h2 className="mb-12 font-serif text-6xl text-gray-800">
-            Spanning a wider <br />
+        <div className="flex max-w-lg flex-col justify-center pt-[350px] px-4 sm:px-0">
+          <h2 className="mb-12 font-serif text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-800">
+            Spanning a wider <br className="hidden sm:block" />
             world of talent
           </h2>
-          <p className="mb-10 text-left text-xl">
-            What are the odds that the most qualified people in the world live in your zip code? We’ll help you see
+          <p className="mb-10 text-left text-base sm:text-lg md:text-xl">
+            What are the odds that the most qualified people in the world live in your zip code? We'll help you see
             further.
           </p>
-          <p className="mb-10 text-left text-xl">
+          <p className="mb-10 text-left text-base sm:text-lg md:text-xl">
             A global team extends your presence across time zones and languages—which means longer reach, constant
             uptime, and happier customers.
           </p>
-          <p className="mb-10 text-left text-xl font-bold">It’s time to go international. No passport required.</p>
+          <p className="mb-10 text-left text-base sm:text-lg md:text-xl font-bold">It's time to go international. No passport required.</p>
 
           <div className="flex w-full justify-center">
-            <div className="w-[75%]">
-              <button className="w-auto rounded-full border-2 border-[#0c3a23] bg-[#0c3a23] px-4 py-2 font-medium text-white transition-all duration-300 hover:cursor-pointer hover:bg-transparent hover:text-[#0c3a23]">
+            <div className="w-full sm:w-[75%]">
+              <button className="w-auto rounded-full border-2 border-[#0c3a23] bg-[#0c3a23] px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base font-medium text-white transition-all duration-300 hover:cursor-pointer hover:bg-transparent hover:text-[#0c3a23]">
                 Get Started
               </button>
             </div>
