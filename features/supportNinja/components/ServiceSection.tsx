@@ -1,4 +1,6 @@
 import React from "react"
+import { motion } from "framer-motion"
+import { fadeInUp, staggerChildren } from "../../../utils/animations"
 
 // Icons can be imported from a library like heroicons or defined inline
 const ServiceCard = ({
@@ -13,7 +15,7 @@ const ServiceCard = ({
   linkText: string
 }) => {
   return (
-    <div className="flex gap-4 ">
+    <div className="flex gap-4">
       <div className="flex-shrink-0">{icon}</div>
       <div className="flex flex-col">
         <h3 className="mb-2 text-xl font-medium text-gray-800">{title}</h3>
@@ -41,9 +43,12 @@ const ServicesSection: React.FC = () => {
   const services = [
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
-          
-          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/6734db6b63d29b612d1a8d19_Icons_Customer-Support.svg" alt="" />
+        <div className="flex h-12 w-12 items-center justify-center rounded-full">
+          <img
+            className="h-8 w-8 text-gray-700"
+            src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/6734db6b63d29b612d1a8d19_Icons_Customer-Support.svg"
+            alt=""
+          />
         </div>
       ),
       title: "Customer Support",
@@ -53,8 +58,12 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
-          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0c6675ce474a_Solutions%20Icon__Customer%20Service.svg" alt="" />
+        <div className="flex h-12 w-12 items-center justify-center rounded-full">
+          <img
+            className="h-8 w-8 text-gray-700"
+            src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0c6675ce474a_Solutions%20Icon__Customer%20Service.svg"
+            alt=""
+          />
         </div>
       ),
       title: "Customer Experience",
@@ -64,8 +73,12 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
-          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0cb1f3ce472c_Solutions%20Icon__Technical%20Support.svg" alt="" />
+        <div className="flex h-12 w-12 items-center justify-center rounded-full">
+          <img
+            className="h-8 w-8 text-gray-700"
+            src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0cb1f3ce472c_Solutions%20Icon__Technical%20Support.svg"
+            alt=""
+          />
         </div>
       ),
       title: "Technical Customer Support",
@@ -74,8 +87,12 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
-          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0ca966ce478f_icons%3DPencil.svg" alt="" />
+        <div className="flex h-12 w-12 items-center justify-center rounded-full">
+          <img
+            className="h-8 w-8 text-gray-700"
+            src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0ca966ce478f_icons%3DPencil.svg"
+            alt=""
+          />
         </div>
       ),
       title: "Content Moderation",
@@ -84,8 +101,12 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
-          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0c1b4ace4778_icons%3DData%20Processing.svg" alt="" />
+        <div className="flex h-12 w-12 items-center justify-center rounded-full">
+          <img
+            className="h-8 w-8 text-gray-700"
+            src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0c1b4ace4778_icons%3DData%20Processing.svg"
+            alt=""
+          />
         </div>
       ),
       title: "Data Processing",
@@ -94,8 +115,12 @@ const ServicesSection: React.FC = () => {
     },
     {
       icon: (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full ">
-          <img className="h-8 w-8 text-gray-700" src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/66ab870287012990781761c9_66a94bdb23f9b933553ccdb1_Untitled%2520design%2520(40)%2520(1).png" alt="" />
+        <div className="flex h-12 w-12 items-center justify-center rounded-full">
+          <img
+            className="h-8 w-8 text-gray-700"
+            src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/66ab870287012990781761c9_66a94bdb23f9b933553ccdb1_Untitled%2520design%2520(40)%2520(1).png"
+            alt=""
+          />
         </div>
       ),
       title: "Finance & Accounting",
@@ -106,7 +131,13 @@ const ServicesSection: React.FC = () => {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
-      <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={fadeInUp}
+        className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3"
+      >
         {services.map((service, index) => (
           <ServiceCard
             key={index}
@@ -116,7 +147,7 @@ const ServicesSection: React.FC = () => {
             linkText={service.linkText}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

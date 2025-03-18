@@ -1,5 +1,7 @@
 "use client"
 import { useState } from "react"
+import { motion } from "framer-motion"
+import { fadeInUp, staggerChildren } from "../../../utils/animations"
 
 const steps = {
   "Management-as-a-Service": [
@@ -27,18 +29,24 @@ export default function CustomApproach() {
         <hr />
         <div className="flex flex-col gap-6 px-4 py-8 sm:gap-8 sm:p-8 md:flex-row md:gap-10 md:p-10">
           {/* Left Column - Shows on md and up */}
-          <div className="md:block md:w-1/2">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="md:block md:w-1/2"
+          >
+            <h2 className="font-serif max-w-xl mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Our customized <br className="hidden sm:block" /> approach
             </h2>
-            <p className="mt-4 max-w-md text-base text-gray-700 sm:text-lg">
+            <p className="mt-4 max-w-xl mx-auto text-base text-gray-700 sm:text-lg">
               We tailor our strategies and services based on your roadblocks and needs, delivering a strategic
               outsourcing playbook — inclusive of technology, talent, and timing — that drives your business forward.
             </p>
-          </div>
+          </motion.div>
 
           {/* Mobile Design */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full max-w-xl mx-auto mx-automd:w-1/2">
             <h3 className="mb-5 text-lg font-semibold">Get set up in 5 easy steps</h3>
             <div className="mb-6 flex flex-row gap-2 overflow-x-auto">
               {Object.keys(steps).map((tab) => (

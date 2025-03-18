@@ -55,18 +55,18 @@ const people = [
 
 const Spanning = () => {
   return (
-    <motion.div 
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={staggerChildren}
-      className="relative flex w-full justify-center bg-[url('/bg/wave-haikei-2.svg')] bg-cover bg-top pb-[100px] text-center"
-    >
-      <motion.div variants={fadeInUp} className="container mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="relative flex w-full justify-center  bg-cover bg-top pb-[100px] text-center">
+    <div className="relative flex w-full justify-center bg-[url('/bg/wave-haikei-2.svg')] bg-cover bg-top pb-[100px] text-center">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={fadeInUp}
+        className="container mx-auto max-w-7xl px-4 sm:px-6"
+      >
+        <div className="relative flex w-full justify-center bg-cover bg-top pb-[100px] text-center">
           <div className="container flex justify-center">
-            <div className="flex max-w-lg flex-col justify-center pt-[350px] px-4 sm:px-0">
-              <h2 className="mb-12 font-serif text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-800">
+            <div className="flex max-w-lg flex-col justify-center px-4 pt-[350px] sm:px-0">
+              <h2 className="mb-12 font-serif text-4xl text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">
                 Spanning a wider <br className="hidden sm:block" />
                 world of talent
               </h2>
@@ -78,11 +78,13 @@ const Spanning = () => {
                 A global team extends your presence across time zones and languages—which means longer reach, constant
                 uptime, and happier customers.
               </p>
-              <p className="mb-10 text-left text-base sm:text-lg md:text-xl font-bold">It's time to go international. No passport required.</p>
+              <p className="mb-10 text-left text-base font-bold sm:text-lg md:text-xl">
+                It's time to go international. No passport required.
+              </p>
 
               <div className="flex w-full justify-center">
                 <div className="w-full sm:w-[75%]">
-                  <button className="w-auto rounded-full border-2 border-[#0c3a23] bg-[#0c3a23] px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base font-medium text-white transition-all duration-300 hover:cursor-pointer hover:bg-transparent hover:text-[#0c3a23]">
+                  <button className="w-auto rounded-full border-2 border-[#0c3a23] bg-[#0c3a23] px-3 py-1.5 text-sm font-medium text-white transition-all duration-300 hover:cursor-pointer hover:bg-transparent hover:text-[#0c3a23] sm:px-4 sm:py-2 sm:text-base">
                     Get Started
                   </button>
                 </div>
@@ -101,7 +103,7 @@ const Spanning = () => {
           ))}
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   )
 }
 
