@@ -1,7 +1,8 @@
 "use client"
 
 import { ArrowLeft, ArrowRight } from "lucide-react"
-import React, { useState } from "react"
+import React, { useEffect,useState } from "react"
+
 
 const TestimonialSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -73,7 +74,7 @@ const TestimonialSlider: React.FC = () => {
                 }`}
                 onClick={() => goToSpecificSlide(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
-                hidden={window.innerWidth < 768}
+                
               />
             ))}
           </div>
