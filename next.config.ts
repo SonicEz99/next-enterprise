@@ -5,6 +5,9 @@ import { env } from "./env.mjs"
 
 const config: NextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ['cdn.prod.website-files.com'],
+  },
   logging: {
     fetches: {
       fullUrl: true,

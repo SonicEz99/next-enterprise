@@ -1,5 +1,6 @@
 "use client"
 
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import React, { useState } from "react"
 
 const TestimonialSlider: React.FC = () => {
@@ -52,67 +53,45 @@ const TestimonialSlider: React.FC = () => {
       <h2 className="mb-10 text-center font-serif text-5xl text-gray-800 md:text-5xl">Why our clients stick with us</h2>
 
       <div className="relative mx-auto max-w-7xl rounded-xl bg-[#f7e1d2] p-8 md:p-16">
-        <div className="absolute top-8 left-8 text-gray-300">
-          <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 90 Q30 70 10 50 Q30 30 10 10" stroke="currentColor" strokeWidth="2" fill="none" />
-            <path d="M30 90 Q50 70 30 50 Q50 30 30 10" stroke="currentColor" strokeWidth="2" fill="none" />
-          </svg>
-        </div>
-        <div className="absolute right-8 bottom-8 text-gray-300">
-          <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M90 10 Q70 30 90 50 Q70 70 90 90" stroke="currentColor" strokeWidth="2" fill="none" />
-            <path d="M70 10 Q50 30 70 50 Q50 70 70 90" stroke="currentColor" strokeWidth="2" fill="none" />
-          </svg>
-        </div>
+        
 
-        <div className="mb-10 text-center max-w-3xl mx-auto">
-          <p className="mb-8 text-xl text-gray-700 italic md:text-2xl">"{testimonials[currentIndex]!.quote}"</p>
+        <div className="mx-auto mb-10 max-w-3xl text-center">
+          <p className="mb-8 text-xl text-gray-700 italic font-semibold md:text-2xl">"{testimonials[currentIndex]!.quote}"</p>
           <div>
             <p className="font-semibold text-gray-800">{testimonials[currentIndex]!.author}</p>
             <p className="text-gray-600">{testimonials[currentIndex]!.title}</p>
           </div>
         </div>
 
-        <div className="mb-6 flex items-center justify-center gap-2">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "w-3 bg-gray-800" : "w-2 bg-gray-300"
-              }`}
-              onClick={() => goToSpecificSlide(index)}
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        <div className="flex justify-end mr-15">
-          <div className="flex overflow-hidden rounded-full bg-green-900">
+        <div className=" flex  items-center justify-around md:flex-row">
+          <div className="mb-6 flex justify-center mt-8 gap-2 hidden sm:hidden md:flex lg:flex xl:flex">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                className={`h-2 cursor-pointer rounded-full transition-all duration-300 ${
+                  index === currentIndex ? "w-3 bg-gray-800" : "w-2 bg-gray-300"
+                }`}
+                onClick={() => goToSpecificSlide(index)}
+                aria-label={`Go to testimonial ${index + 1}`}
+                hidden={window.innerWidth < 768}
+              />
+            ))}
+          </div>
+          <hr className="container mx-auto max-w-lg border-t border-[#bfc1b9] hidden block sm:hidden md:block md:max-w-3xs lg:block xl:block xl:max-w-2xl" />
+          <div className="mx-auto flex overflow-hidden rounded-full bg-[#0c3a23] md:mx-0">
             <button
               onClick={goToPrevious}
-              className="p-3 text-white transition-colors hover:bg-green-800"
+              className="cursor-pointer p-3 px-4 text-white transition-colors hover:text-[#edbc4f]"
               aria-label="Previous testimonial"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <ArrowLeft width={16} height={16} />
             </button>
             <button
               onClick={goToNext}
-              className="p-3 text-white transition-colors hover:bg-green-800"
+              className="cursor-pointer p-3 px-4 text-white transition-colors hover:text-[#edbc4f]"
               aria-label="Next testimonial"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <ArrowRight width={16} height={16} />
             </button>
           </div>
         </div>

@@ -1,18 +1,17 @@
 "use client"
-import SupportNinjaStickyNavbar from "features/supportNinja/components/SupportNinjaStickyNavbar"
-import SupportNinjaNavbar from "../../features/supportNinja/components/SupportNinjaNavbar"
-import ServiceSelection from "features/supportNinja/components/Service"
-import ButtonGetStarted from "features/supportNinja/components/getstartButton"
-import Content from "features/supportNinja/components/Content"
-import ServicesSection from "features/supportNinja/components/ServiceSection"
-import TestimonialSlider from "features/supportNinja/components/Testimonials"
-import Footer from "features/supportNinja/components/Footer"
-import Spanning from "features/supportNinja/components/Spinning"
-import CustomApproach from "features/supportNinja/components/CustomApproach"
-import PeopleSection from "features/supportNinja/components/Peoplesection"
 import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
+import Image from "next/image"
+import Content from "features/supportNinja/components/Content"
+import CustomApproach from "features/supportNinja/components/CustomApproach"
+import Footer from "features/supportNinja/components/Footer"
+import ButtonGetStarted from "features/supportNinja/components/getstartButton"
+import PeopleSection from "features/supportNinja/components/Peoplesection"
+import ServiceSelection from "features/supportNinja/components/Service"
+import ServicesSection from "features/supportNinja/components/ServiceSection"
+import Spanning from "features/supportNinja/components/Spinning"
+import SupportNinjaStickyNavbar from "features/supportNinja/components/SupportNinjaStickyNavbar"
+import TestimonialSlider from "features/supportNinja/components/Testimonials"
+import SupportNinjaNavbar from "../../features/supportNinja/components/SupportNinjaNavbar"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -56,7 +55,7 @@ const supportNinjaPage = () => {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeInUp}
-                className="font-tenon mb-4 max-w-5xl text-lg leading-relaxed font-[500] text-[#474546] sm:text-lg md:max-w-xl md:text-xl lg:max-w-2xl lg:text-2xl xl:text-2xl"
+                className="font-tenon mb-4 max-w-5xl text-lg leading-relaxed font-semibold text-[#66615f] sm:text-lg sm:font-semibold md:max-w-xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:font-[#2b2c30] xl:text-2xl xl:font-medium"
               >
                 Quickly and seamlessly scale your team with agile, highly customizable outsourcing solutions that power
                 your growth.
@@ -70,14 +69,16 @@ const supportNinjaPage = () => {
             </motion.div>
           </motion.section>
 
-          <hr className="mx-auto mt-6 mb-8 max-w-7xl border-t border-gray-300" />
+          <hr className="container mx-auto mt-6 mb-8 border-t border-[#bfc1b9]" />
 
           <section className="py-8">
             <div className="mb-8 flex flex-col items-center justify-center text-center">
               <h2 className="mb-2 font-sans text-xl font-bold sm:text-2xl">
                 Which outsourcing solutions are you looking for?
               </h2>
-              <p className="font-semibold text-gray-700">Choose as many as you need.</p>
+              <p className="text-md font-medium sm:text-md sm:font-medium md:max-w-xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:mb-5 xl:font-[#2b2c30] xl:text-2xl xl:font-medium">
+                Choose as many as you need.
+              </p>
             </div>
             <div className="md:mx-10">
               <ServiceSelection />
@@ -95,11 +96,11 @@ const supportNinjaPage = () => {
       </main>
 
       <div>
-        <img
+        <Image
           src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0cc5c4ce4784_Bottom%20Squiggle.svg"
           alt=""
-          width="1792"
-          height="128"
+          width={100}
+          height={100}
           className="w-full bg-[#fffcfa]"
         />
       </div>
@@ -107,11 +108,10 @@ const supportNinjaPage = () => {
       <div className="container mx-auto bg-[#fffcfa] px-4 sm:px-8 md:px-8 lg:px-8 xl:px-8">
         <section className="flex flex-col items-center justify-between py-16 xl:flex-row">
           <div className="w-full xl:w-1/2">
-            <img
-              src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c5b45ce4789_Character%20Illustration__Woman%20Watering%20Bar%20Chart.webp"
-              loading="lazy"
-              sizes="(max-width: 1725px) 100vw, 1725px"
-              srcSet="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c5b45ce4789_Character%2520Illustration__Woman%2520Watering%2520Bar%2520Chart-p-500.webp 500w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c5b45ce4789_Character%2520Illustration__Woman%2520Watering%2520Bar%2520Chart-p-800.webp 800w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c5b45ce4789_Character%2520Illustration__Woman%2520Watering%2520Bar%2520Chart-p-1080.webp 1080w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c5b45ce4789_Character%20Illustration__Woman%20Watering%20Bar%20Chart.webp 1725w"
+            <Image
+              src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c5b45ce4789_Character%2520Illustration__Woman%2520Watering%2520Bar%2520Chart-p-1080.webp"
+              width={600}
+              height={600}
               alt=""
               className="w-full object-contain lg:w-full xl:mr-16 xl:w-full xl:pr-16"
             />
@@ -121,12 +121,12 @@ const supportNinjaPage = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
-            className="mt-8 w-full space-y-6 xl:mt-0 xl:ml-16 xl:w-1/2 xl:pl-16 px-4 sm:px-6 md:px-8 lg:px-8 xl:px-8"
+            className="mt-8 w-full space-y-6 px-4 sm:px-6 md:px-8 lg:px-8 xl:mt-0 xl:ml-16 xl:w-1/2 xl:px-8 xl:pl-16"
           >
-            <h1 className="font-serif text-4xl font-light sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl ">
+            <h1 className="font-serif text-4xl font-light sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
               Free up resources, accelerate growth, and solve for scale.
             </h1>
-            <div className="mt-6 space-y-5 text-lg text-gray-700">
+            <div className="text-md sm:text-md mt-6 space-y-5 font-semibold text-[#2b2c30] sm:font-medium md:max-w-3xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:font-[#2b2c30] xl:text-2xl xl:font-[400]">
               <p>
                 At SupportNinja, we combine cutting-edge technology with value-centricity to foster high-performing,
                 reliable teams that turn growing pains into efficient pathways to profitability.
@@ -145,7 +145,7 @@ const supportNinjaPage = () => {
           </motion.div>
         </section>
 
-        <section className="flex flex-col-reverse items-center justify-between gap-8 bg-[#fffcfa] py-16 xl:flex-row px-4 sm:px-6 md:px-8 lg:px-8 xl:px-8">
+        <section className="flex flex-col-reverse items-center justify-between gap-8 bg-[#fffcfa] px-4 py-16 sm:px-6 md:px-8 lg:px-8 xl:flex-row xl:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -157,36 +157,39 @@ const supportNinjaPage = () => {
               Don't grow it alone
             </h1>
             <div className="mt-6 w-full space-y-5 text-lg text-gray-700 sm:space-y-5 md:space-y-5 xl:space-y-6">
-              <p className="text-xl">
+              <p className="text-md sm:text-md font-semibold text-[#8d8d8d] sm:font-medium md:max-w-xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:font-[#2b2c30] xl:text-2xl xl:font-[400] xl:font-medium">
                 Don't let headcount become a headache. We'll connect you with talent that meets your needs.
               </p>
-              <p className="text-xl">
+              <p className="text-md sm:text-md font-semibold text-[#8d8d8d] sm:font-medium md:max-w-xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:font-[#2b2c30] xl:text-2xl xl:font-[400] xl:font-medium">
                 Your dedicated new team members will become experts in your world — your customers, your tech, your
                 data, your systems — so they can expand on what you've built.
               </p>
             </div>
           </motion.div>
           <div className="flex w-full justify-start sm:justify-start md:justify-start lg:justify-start xl:w-1/3 xl:justify-end">
-            <img
-              className="lg:w-1/4"
+            <Image
+              className="lg:w-1/2"
               src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c4794ce4765_Illustration%3DPlant%201.svg"
               loading="lazy"
+              width={100}
+              height={100}
               alt="Illustration of green plant inside of red and white vase"
             />
           </div>
         </section>
-        <ServicesSection />
+        <hr className="container mx-auto mt-6 border-t border-[#bfc1b9]" />
+        <div className="ml-4 mr-4 container mx-auto">
+          <ServicesSection />
+        </div>
       </div>
 
       <div className="mt-15 bg-[#fffcfa] md:px-16 xl:px-20">
         <TestimonialSlider />
       </div>
 
-        <Spanning />
+      <Spanning />
       <CustomApproach />
-      <div className="px-8">
-      </div>
-
+      <div className="px-8"></div>
 
       <div className="container mx-auto px-8 sm:px-6 lg:px-8">
         <PeopleSection />
@@ -201,19 +204,21 @@ const supportNinjaPage = () => {
           className="flex flex-col-reverse items-center justify-between gap-12 py-16 xl:flex-row"
         >
           <motion.div variants={fadeInUp} className="relative mt-12 w-full px-4 xl:mt-0 xl:w-1/2">
-            <img
+            <Image
               src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%20Image__Conference%20Room.webp"
               alt="Team meeting in conference room"
               sizes="50vw"
-              srcSet="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%2520Image__Conference%2520Room-p-500.webp 500w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%2520Image__Conference%2520Room-p-800.webp 800w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%2520Image__Conference%2520Room-p-1080.webp 1080w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%2520Image__Conference%2520Room-p-1600.webp 1600w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c7fc2ce4791_Stock%20Image__Conference%20Room.webp 1720w"
+              width={600}
+              height={600}
               className="w-full rounded-lg object-cover"
             />
 
             <div className="xs:w-40 xs:h-40 absolute bottom-4 left-4 h-36 w-36 translate-x-1/4 translate-y-1/4 transform shadow-xl sm:h-28 sm:w-28 md:h-40 md:w-40 lg:h-48 lg:w-48">
-              <img
+              <Image
                 loading="lazy"
                 sizes="100vw"
-                srcSet="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c34dace47c3_Tile%2520Illustrations__Document%25202-p-500.png 500w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c34dace47c3_Tile%20Illustrations__Document%202.webp 660w"
+                width={200}
+                height={200}
                 src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c34dace47c3_Tile%20Illustrations__Document%202.webp"
                 alt="Spot illustration of a pencil and a piece of paper."
                 className="h-full w-full rounded-lg bg-[#f7e1d2] object-contain shadow-lg"
@@ -227,11 +232,12 @@ const supportNinjaPage = () => {
             >
               Grow your career and unleash your potential.
             </motion.h1>
+            
             <motion.div variants={fadeInUp} className="space-y-4 lg:ml-12 xl:ml-12">
-              <p className="text-xl font-medium text-gray-900">
+              <p className="text-gray-900 font-bold text-based sm:text-based md:text-lg xl:text-xl">
                 Ready to expand your horizons at a truly global company?
               </p>
-              <p className="text-xl text-gray-900">
+              <p className="text-gray-600 font-semibold text-based sm:text-based md:text-lg xl:text-xl">
                 Your dedicated new team members will become experts in your world — your customers, your tech, your
                 data, your systems — so they can expand on what you've built.
               </p>
@@ -245,10 +251,12 @@ const supportNinjaPage = () => {
         </motion.section>
       </div>
 
-      <img
+      <Image
         className="w-full lg:w-full xl:w-full"
         src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c211cce4793_Section%20Curve%2003.svg"
         alt=""
+        width={100}
+        height={100}
       />
       <div className="w-full bg-[#f7e1d2] px-4 sm:px-6 md:px-8 lg:px-8 xl:px-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,7 +272,7 @@ const supportNinjaPage = () => {
                 We're better together. Start building your dream team.
               </motion.h1>
               <div className="space-y-4">
-                <p className="text-xl">Design a custom outsourcing solution that drives results.</p>
+                <p className="text-gray-900 font-bold text-based sm:text-based md:text-lg xl:text-xl">Design a custom outsourcing solution that drives results.</p>
               </div>
               <motion.div
                 initial="hidden"
@@ -277,14 +285,15 @@ const supportNinjaPage = () => {
             </div>
 
             <div className="w-full xl:w-1/2">
-              <img
+              <Image
                 src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0cc4e1ce4794_Character%20Illustration__Footer-CTA.webp"
                 loading="lazy"
                 sizes="100vw"
-                srcSet="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0cc4e1ce4794_Character%2520Illustration__Footer-CTA-p-500.webp 500w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0cc4e1ce4794_Character%2520Illustration__Footer-CTA-p-800.webp 800w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0cc4e1ce4794_Character%2520Illustration__Footer-CTA-p-1080.webp 1080w, https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0cc4e1ce4794_Character%20Illustration__Footer-CTA.webp 1638w"
+                width={600}
+                height={600}
                 alt="An illustration of A woman holding a clipboard, a woman planting, and a man holding a cup and and phone"
                 className="full-width-image"
-              ></img>
+              ></Image>
             </div>
           </section>
         </div>

@@ -65,9 +65,9 @@ const ServiceSelection = () => {
             }`}
             onClick={() => toggleSelection(service.id)}
           >
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 font-bold">
               <img src={service.image} alt={service.title} className="h-16 w-16 object-contain" />
-              <h3 className="flex-1 font-semibold">{service.title}</h3>
+              <h3 className="flex-1 font-bold">{service.title}</h3>
               <div className="text-gray-700">
                 {selected.includes(service.id) ? (
                   <CheckSquare size={20} className="text-gray-700" />

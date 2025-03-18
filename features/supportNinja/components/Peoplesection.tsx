@@ -8,8 +8,8 @@ const PeopleSection: React.FC = () => {
           <h2 className="font-serif text-4xl text-gray-900 md:text-6xl">
             We're passionate about our <span className="italic">people</span>.
           </h2>
-          <p className="text-xl text-gray-900">Our people-first culture attracts and retains top talent.</p>
-          <p className="text-gray-600 text-xl">
+          <p className=" text-gray-900 font-bold text-based sm:text-based md:text-lg xl:text-xl">Our people-first culture attracts and retains top talent.</p>
+          <p className="text-gray-600 font-semibold text-based sm:text-based md:text-lg xl:text-xl">
             For nearly a decade, we've fostered the growth, well-being, and career development of our team members — and
             that's earned us industry-high talent retention rates.
           </p>

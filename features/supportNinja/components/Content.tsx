@@ -1,5 +1,6 @@
-import React from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
+import React from "react"
 import { fadeInUp, staggerChildren } from "../../../utils/animations"
 
 function Content() {
@@ -23,37 +24,49 @@ function Content() {
       </motion.div>
       <motion.div 
         variants={fadeInUp}
-        className="flex flex-wrap items-center justify-center gap-6 px-2 xl:w-2/3"
+        className="flex flex-wrap items-center justify-center sm:justify-center md:justify-center lg:justify-center xl:justify-end gap-4 px-2 xl:w-2/3"
       >
-        <img
+        <Image
           src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c0380ce484b_B%26MG_foundation.svg"
           alt="Company Logo"
-          className="h-26 w-26 object-contain sm:h-8"
+          width={100}
+          height={100}
+          className="h-6 w-22 object-contain sm:h-8"
         />
-        <img
+        <Image
           src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64f9e7ede9b6df55f6f1a029_Midjourney%20Logo%20(1).svg"
           alt="Company Logo"
-          className="h-26 w-26 object-contain sm:h-8"
+          width={100}
+          height={100}
+          className="h-6 w-22 object-contain sm:h-8"
         />
-        <img
+        <Image
           src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/65a7f1f93afe1bee1bb429a4_Happy%20Socks%20Logo.svg"
           alt="Company Logo"
-          className="h-26 w-26 object-contain sm:h-8"
+          width={100}
+          height={100}
+          className="h-6 w-22 object-contain sm:h-8"
         />
-        <img
+        <Image
           src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c0a86ce483a_Customer%20Logo__Vidyard.svg"
           alt="Company Logo"
-          className="h-26 w-26 object-contain sm:h-8"
+          width={100}
+          height={100}
+          className="h-6 w-22 object-contain sm:h-8 sm:w-8"
         />
-        <img
+        <Image
           src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0cd632ce484a_redweek.svg"
           alt="Company Logo"
-          className="h-26 w-26 object-contain sm:h-8"
+          width={100}
+          height={100}
+          className="h-6 w-22 object-contain sm:h-8"
         />
-        <img
+        <Image
           src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0cd161ce4839_Customer%20Logo__Product%20Madness.svg"
           alt="Company Logo"
-          className="h-26 w-26 object-contain sm:h-8"
+          width={100}
+          height={50}
+          className="h-6 w-26 object-contain sm:h-8"
         />
       </motion.div>
     </motion.div>

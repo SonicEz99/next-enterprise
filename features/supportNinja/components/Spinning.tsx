@@ -1,6 +1,6 @@
-import React from "react"
 import { motion } from "framer-motion"
-import { fadeInUp, staggerChildren } from "../../../utils/animations"
+import React from "react"
+import { fadeInUp } from "../../../utils/animations"
 
 const people = [
   {
@@ -70,11 +70,11 @@ const Spanning = () => {
                 Spanning a wider <br className="hidden sm:block" />
                 world of talent
               </h2>
-              <p className="mb-10 text-left text-base sm:text-lg md:text-xl">
+              <p className="mb-10 text-left text-base max-w-4xl font-semibold sm:text-base md:text-xl lg:font-medium xl:font-medium">
                 What are the odds that the most qualified people in the world live in your zip code? We'll help you see
                 further.
               </p>
-              <p className="mb-10 text-left text-base sm:text-lg md:text-xl">
+              <p className="mb-10 text-left text-base max-w-4xl font-semibold sm:text-base md:text-xl lg:font-medium xl:font-medium">
                 A global team extends your presence across time zones and languages—which means longer reach, constant
                 uptime, and happier customers.
               </p>

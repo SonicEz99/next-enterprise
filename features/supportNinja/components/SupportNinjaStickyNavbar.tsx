@@ -1,7 +1,6 @@
 "use client"
-import { useState, useEffect } from "react"
-import { ArrowDown, Menu, X, ChevronDown, ChevronUp, ArrowRight, ChevronRight, CheckSquare } from "lucide-react"
-import ButtonGetStarted from "features/supportNinja/components/getstartButton"
+import { ArrowRight, ChevronDown, ChevronRight, Menu, X } from "lucide-react"
+import { useEffect, useState } from "react"
 
 interface DropdownProps {
   items: string[]
@@ -180,7 +179,7 @@ const SupportNinjaStickyNavbar = () => {
     >
       <div
         className={`flex gap-5 text-xl font-bold transition-opacity duration-300  ${
-          scrolled ? "invisible opacity-0" : "opacity-100"
+          scrolled ? "invisible opacity-0 " : "opacity-100"
         }`}
       >
         <img
@@ -195,7 +194,7 @@ const SupportNinjaStickyNavbar = () => {
       {/* Desktop Navigation Menu */}
       <ul
         className={`hidden space-x-8 font-semibold text-black lg:flex lg:hidden xl:flex ${
-          scrolled ? "rounded-full bg-white px-8 py-4" : ""
+          scrolled ? "rounded-full bg-white px-8 py-4 border border-[#d5d2d2]" : ""
         }`}
       >
         <li

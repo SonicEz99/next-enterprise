@@ -1,7 +1,7 @@
 "use client"
-import { useState } from "react"
 import { motion } from "framer-motion"
-import { fadeInUp, staggerChildren } from "../../../utils/animations"
+import { useState } from "react"
+import { fadeInUp } from "../../../utils/animations"
 
 const steps = {
   "Management-as-a-Service": [
@@ -78,7 +78,7 @@ export default function CustomApproach() {
               </div>
             </div>
 
-            <button className="mt-10 w-full rounded-full border-2 border-[#0c3a23] bg-[#0c3a23] py-3 font-medium text-white transition-all duration-300 hover:cursor-pointer hover:bg-transparent hover:text-black">
+            <button className="mt-10 mb-15 w-full rounded-full border-2 border-[#0c3a23] bg-[#0c3a23] py-3 font-medium text-white transition-all duration-300 hover:cursor-pointer hover:bg-transparent hover:text-black">
               View details
             </button>
           </div>
