@@ -25,8 +25,10 @@ const MegaDropdown: React.FC<MegaDropdownProps> = ({ items }) => {
       <div className="grid grid-cols-2 gap-8 p-8">
         <div className="flex flex-col">
           <div className="mt-2 flex items-center gap-4 hover:bg-gray-100">
-            
-            <img src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0c6675ce474a_Solutions%20Icon__Customer%20Service.svg" alt="" />
+            <img
+              src="https://cdn.prod.website-files.com/64149f79022d0c3ed8ce46e9/64149f79022d0c6675ce474a_Solutions%20Icon__Customer%20Service.svg"
+              alt=""
+            />
             <h3 className="flex items-center text-lg font-semibold text-gray-800">Customer Experience</h3>
             <ChevronRight className="ml-1" width={14} height={14} />
           </div>
@@ -173,13 +175,13 @@ const SupportNinjaStickyNavbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-1/2 z-50 mt-15 flex w-full max-w-[1500px] sm:max-w-[900px] md:max-w-[800px] lg:max-w-[1700px] xl:max-w-[1700px]  -translate-x-1/2 items-center justify-between px-10 py-6 transition-all duration-300 ${
+      className={`fixed top-0 left-1/2 z-50 mt-15 flex w-full max-w-[1500px] -translate-x-1/2 items-center justify-between px-10 py-6 transition-all duration-300 sm:max-w-[900px] md:max-w-[800px] lg:max-w-[1700px] xl:max-w-[1700px] ${
         scrolled ? "mt-[5]" : ""
       }`}
     >
       <div
-        className={`flex gap-5 text-xl font-bold transition-opacity duration-300  ${
-          scrolled ? "invisible opacity-0 " : "opacity-100"
+        className={`flex gap-5 text-xl font-bold transition-opacity duration-300 ${
+          scrolled ? "invisible opacity-0" : "opacity-100"
         }`}
       >
         <img
@@ -187,69 +189,71 @@ const SupportNinjaStickyNavbar = () => {
           width="200"
           height="200"
           alt="Support Ninja Logo"
-          className=" w-40 h-18 sm:w-38 sm:h-12 lg:w-3xs"
+          className="h-18 w-40 sm:h-12 sm:w-38 lg:w-3xs"
         />
       </div>
 
       {/* Desktop Navigation Menu */}
-      <ul
-        className={`hidden space-x-8 font-semibold text-black lg:flex lg:hidden xl:flex pr-30 ${
-          scrolled ? "rounded-full bg-white px-8 py-4 border border-[#d5d2d2]" : ""
-        }`}
-      >
-        <li
-          className="group relative "
-          onMouseEnter={() => handleDropdownToggle("solutions")}
-          onMouseLeave={() => handleDropdownToggle("solutions")}
+      <div className="pr-30">
+        <ul
+          className={`hidden space-x-8 font-semibold text-lg text-black lg:flex lg:hidden xl:flex ${
+            scrolled ? "rounded-full border border-[#d5d2d2] bg-white px-8 py-3" : ""
+          }`}
         >
-          <a href="#" className="flex items-center gap-1">
-            Solutions
-            <ChevronDown width={12} height={12} />
-          </a>
-          {openDropdown === "solutions" && <MegaDropdown items={industriesItems} />}
-        </li>
+          <li
+            className="group relative"
+            onMouseEnter={() => handleDropdownToggle("solutions")}
+            onMouseLeave={() => handleDropdownToggle("solutions")}
+          >
+            <a href="#" className="flex items-center gap-1">
+              Solutions
+              <ChevronDown width={12} height={12} />
+            </a>
+            {openDropdown === "solutions" && <MegaDropdown items={industriesItems} />}
+          </li>
 
-        <li
-          className="group relative"
-          onMouseEnter={() => handleDropdownToggle("industries")}
-          onMouseLeave={() => handleDropdownToggle("industries")}
-        >
-          <a href="#" className="flex items-center gap-1">
-            Industries
-            <ChevronDown width={12} height={12} />
-          </a>
-          {openDropdown === "industries" && (
-            <DropIndustriesdown
-              items={["SaaS", "AI", "Ecommerce", "Healthcare", "Supply Chain & Logistics", "Fintech"]}
-            />
-          )}
-        </li>
+          <li
+            className="group relative"
+            onMouseEnter={() => handleDropdownToggle("industries")}
+            onMouseLeave={() => handleDropdownToggle("industries")}
+          >
+            <a href="#" className="flex items-center gap-1">
+              Industries
+              <ChevronDown width={12} height={12} />
+            </a>
+            {openDropdown === "industries" && (
+              <DropIndustriesdown
+                items={["SaaS", "AI", "Ecommerce", "Healthcare", "Supply Chain & Logistics", "Fintech"]}
+              />
+            )}
+          </li>
 
-        <li className="group relative">
-          <a href="#" className="">
-            How it Works
-          </a>
-        </li>
+          <li className="group relative">
+            <a href="#" className="">
+              How it Works
+            </a>
+          </li>
 
-        <li
-          className="group relative"
-          onMouseEnter={() => handleDropdownToggle("about")}
-          onMouseLeave={() => handleDropdownToggle("about")}
-        >
-          <a href="#" className="flex items-center gap-1">
-            About <ChevronDown width={12} height={12} />
-          </a>
-          {openDropdown === "about" && <DropAboutdown items={["About us", "Careers"]} />}
-        </li>
+          <li
+            className="group relative"
+            onMouseEnter={() => handleDropdownToggle("about")}
+            onMouseLeave={() => handleDropdownToggle("about")}
+          >
+            <a href="#" className="flex items-center gap-1">
+              About <ChevronDown width={12} height={12} />
+            </a>
+            {openDropdown === "about" && <DropAboutdown items={["About us", "Careers"]} />}
+          </li>
 
-        <li>
-          <a href="#" className="">
-            Resources
-          </a>
-        </li>
-      </ul>
+          <li>
+            <a href="#" className="">
+              Resources
+            </a>
+          </li>
+        </ul>
+      </div>
 
-      <button className="hidden lg:hidden xl:flex rounded-full bg-[#0c3a23] px-7 py-3 font-sans text-xl font-semibold text-white lg:block">
+      <button className="hidden rounded-full bg-[#0c3a23] px-7 py-3 font-sans text-xl font-semibold text-white lg:block lg:hidden xl:flex">
         Get Started
       </button>
 
@@ -267,8 +271,8 @@ const SupportNinjaStickyNavbar = () => {
               <X width={40} height={40} />
             </button>
           </div>
-          <ul className="mt-20 space-y-4 font-semibold text-black ">
-            <li className="font-sans ">
+          <ul className="mt-20 space-y-4 font-semibold text-black">
+            <li className="font-sans">
               <a href="#" className="mt-3 flex items-center justify-between">
                 <h1 className="text-xl">Solutions</h1>
               </a>

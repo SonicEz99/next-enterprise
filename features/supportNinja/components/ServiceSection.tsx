@@ -15,7 +15,7 @@ const ServiceCard = ({
   linkText: string
 }) => {
   return (
-    <div className="flex w-full mx-4 mx-auto rounded-xl gap-4 flex-col items-start sm:items-start md:flex-row md:items-strech lg:flex-row lg:items-strech xl:flex-row xl:items-strech">
+    <div className="flex w-full mx-4 bg-[#fffcfa] mx-auto rounded-xl gap-4 flex-col items-start sm:items-start md:flex-row md:items-strech lg:flex-row lg:items-strech xl:flex-row xl:items-strech">
       <div className="flex-shrink-0 items-start sm:items-start sm:left-5">{icon}</div>
       <div className="flex flex-col">
         <h3 className="mb-2 text-xl font-medium text-gray-800 ">{title}</h3>

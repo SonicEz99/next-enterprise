@@ -26,7 +26,7 @@ export default function CustomApproach() {
   return (
     <div className="font-san mx-auto w-full px-4 bg-[#bfc1b9]">
       <div className="container mx-auto sm:px-6">
-        <hr />
+        
         <div className="flex flex-col gap-6 px-4 py-8 sm:gap-8 sm:p-8 md:flex-col md:gap-10 md:p-10 xl:flex-row">
           
           <motion.div
@@ -53,7 +53,7 @@ export default function CustomApproach() {
                 <button
                   key={tab}
                   className={`rounded-full px-4 py-2 text-sm whitespace-nowrap w-full ${
-                    selectedTab === tab ? "bg-white text-black" : "bg-white/30 text-black"
+                    selectedTab === tab ? "bg-white text-black font-semibold" : "bg-white/30 text-black font-semibold"
                   }`}
                   onClick={() => setSelectedTab(tab as keyof typeof steps)}
                 >
@@ -64,15 +64,15 @@ export default function CustomApproach() {
 
             <div className="relative">
               {/* Vertical line connecting steps */}
-              <div className="absolute top-4 left-3 h-[calc(100%-40px)] w-0.5 bg-gray-300"></div>
+              <div className="absolute top-4 left-4 h-[calc(100%-40px)] w-0.5 bg-gray-300"></div>
 
               <div className="space-y-8">
                 {steps[selectedTab].map((step, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="z-10 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-gray-800">
+                    <div className="z-10 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-gray-800">
                       {index + 1}
                     </div>
-                    <p className="ml-4 font-sans text-sm">{step}</p>
+                    <p className="ml-4 font-sans text-md font-semibold">{step}</p>
                   </div>
                 ))}
               </div>

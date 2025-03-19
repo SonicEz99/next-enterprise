@@ -19,7 +19,7 @@ const fadeInUp = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.7,
       ease: "easeOut",
     },
   },
@@ -37,7 +37,7 @@ const staggerChildren = {
 
 const supportNinjaPage = () => {
   return (
-    <div className="mx-auto w-full bg-red-600 font-sans text-gray-800">
+    <div className="mx-auto w-full bg-[#fffcfa] bg-red-600 font-sans text-gray-800">
       <div className="bg-[#fffcfa]">
         <div className="mx-8 sm:mx-10 md:mx-15 lg:mx-22 xl:mx-10">
           <SupportNinjaStickyNavbar />
@@ -107,7 +107,7 @@ const supportNinjaPage = () => {
           />
         </div>
 
-        <div className="mx-8 bg-[#fffcfa] bg-white sm:mx-10 md:mx-15 lg:mx-22 xl:mx-30">
+        <div className="mx-8 bg-[#fffcfa] sm:mx-10 md:mx-15 lg:mx-22 xl:mx-30">
           <section className="flex flex-col items-center justify-between bg-[#fffcfa] py-16 xl:flex-row">
             <div className="w-full xl:w-1/2">
               <Image
@@ -125,11 +125,11 @@ const supportNinjaPage = () => {
               variants={fadeInUp}
               className="mt-8 w-full space-y-6 bg-[#fffcfa] lg:px-8 xl:mt-0 xl:ml-2 xl:w-1/2 xl:pl-15"
             >
-              <div className="xl:mr-10">
-                <h1 className="font-serif text-4xl font-light sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
+              <div className="mr-0 sm:mr-0 md:mr-0 lg:mr-0 ">
+                <h1 className="font-serif text-4xl font-light sm:text-4xl md:text-5xl lg:text-5xl xl:max-w-2xl xl:text-6xl">
                   Free up resources, accelerate growth, and solve for scale.
                 </h1>
-                <div className="text-md sm:text-md mt-6 space-y-5 font-semibold text-[#2b2c30] sm:font-medium md:max-w-3xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:font-[#2b2c30] xl:text-2xl xl:font-semibold">
+                <div className="text-md sm:text-md mt-6 space-y-5 font-semibold text-[#2b2c30] sm:font-medium md:max-w-3xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:text-2xl xl:font-normal xl:text-[#727173]">
                   <p>
                     At SupportNinja, we combine cutting-edge technology with value-centricity to foster high-performing,
                     reliable teams that turn growing pains into efficient pathways to profitability.
@@ -149,7 +149,7 @@ const supportNinjaPage = () => {
             </motion.div>
           </section>
 
-          <section className="flex flex-col-reverse items-center justify-between gap-8 bg-[#fffcfa] py-16 xl:flex-row">
+          <section className="mx-auto flex flex-col-reverse items-center justify-between gap-8 bg-[#fffcfa] py-16 xl:max-w-6xl xl:flex-row">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -157,22 +157,23 @@ const supportNinjaPage = () => {
               variants={fadeInUp}
               className="mt-8 w-full space-y-6 xl:mt-0 xl:w-2/3"
             >
-              <div className="sm: pl-0 md:pl-0 lg:pl-20 xl:pl-20">
+              <div></div>
+              <div className="pl-0 sm:pl-0 md:pl-0">
                 <h1 className="font-serif text-4xl font-light sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
                   Don't grow it alone
                 </h1>
                 <div className="mt-6 w-full space-y-5 text-lg text-gray-700 sm:space-y-5 md:space-y-5 xl:space-y-6">
-                  <p className="text-md sm:text-md font-semibold text-[#8d8d8d] sm:font-medium md:max-w-xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:font-[#2b2c30] xl:text-2xl xl:font-[400] xl:font-medium">
+                  <p className="text-md sm:text-md font-semibold text-[#8d8d8d] sm:font-medium md:max-w-xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:font-[#2b2c30] xl:text-2xl xl:font-[400] xl:font-normal">
                     Don't let headcount become a headache. We'll connect you with talent that meets your needs.
                   </p>
-                  <p className="text-md sm:text-md font-semibold text-[#8d8d8d] sm:font-medium md:max-w-xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:font-[#2b2c30] xl:text-2xl xl:font-[400] xl:font-medium">
+                  <p className="text-md sm:text-md font-semibold text-[#8d8d8d] sm:font-medium md:max-w-xl md:text-xl md:font-semibold lg:max-w-2xl lg:text-2xl xl:font-[#2b2c30] xl:text-2xl xl:font-[400] xl:font-normal">
                     Your dedicated new team members will become experts in your world — your customers, your tech, your
                     data, your systems — so they can expand on what you've built.
                   </p>
                 </div>
               </div>
             </motion.div>
-            <div className="flex w-full justify-start sm:justify-start md:justify-start lg:justify-start xl:w-1/4 xl:justify-end xl:pr-20">
+            <div className="flex w-full justify-start sm:justify-start md:justify-start lg:justify-start xl:w-1/4 xl:justify-end">
               <Image
                 className="md:w-1/4 lg:w-1/2"
                 src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0c4794ce4765_Illustration%3DPlant%201.svg"
@@ -182,9 +183,9 @@ const supportNinjaPage = () => {
                 alt="Illustration of green plant inside of red and white vase"
               />
             </div>
+            <hr className="mx-0 mt-6 border-t border-[#bfc1b9] bg-[#fffcfa] sm:mx-0 md:mx-0 lg:mx-0 xl:mx-20" />
           </section>
-          <hr className="mx-0 mt-6 border-t border-[#bfc1b9] sm:mx-0 md:mx-0 lg:mx-0 xl:mx-20" />
-          <div className="mx-0 sm:mx-0 md:mx-0 lg:mx-0 xl:mx-20">
+          <div className="container mx-auto max-w-6xl">
             <ServicesSection />
             <TestimonialSlider />
           </div>
@@ -194,9 +195,8 @@ const supportNinjaPage = () => {
 
         <Spanning />
         <CustomApproach />
-        <div className="px-8"></div>
 
-        <div className="mx-8 sm:mx-8 md:mx-15 lg:mx-22 xl:mx-30">
+        <div className="mx-8 sm:mx-8 md:mx-[60px] lg:mx-[88px] xl:mx-[200px] xl:max-w-[1500px]">
           <PeopleSection />
         </div>
 
@@ -231,7 +231,7 @@ const supportNinjaPage = () => {
               </div>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="w-full space-y-6 md:max-w-2xl xl:w-1/2">
+            <motion.div variants={fadeInUp} className="w-full space-y-6 md:max-w-2xl">
               <motion.h1
                 variants={fadeInUp}
                 className="font-serif text-4xl font-light sm:text-5xl md:text-6xl lg:ml-12 xl:ml-12"
@@ -279,7 +279,7 @@ const supportNinjaPage = () => {
                   We're better together. Start building your dream team.
                 </motion.h1>
                 <div className="space-y-4">
-                  <p className="text-xs sm:text-xs font-bold text-gray-900 md:text-lg xl:text-xl">
+                  <p className="text-xs font-bold text-gray-900 sm:text-xs md:text-lg xl:text-xl">
                     Design a custom outsourcing solution that drives results.
                   </p>
                 </div>
@@ -293,7 +293,7 @@ const supportNinjaPage = () => {
                 </motion.div>
               </div>
 
-              <div className="container w-full mx-auto xl:w-1/2">
+              <div className="container mx-auto w-full xl:w-1/2">
                 <Image
                   src="https://cdn.prod.website-files.com/64149f79022d0c5fc8ce46e8/64149f79022d0cc4e1ce4794_Character%20Illustration__Footer-CTA.webp"
                   loading="lazy"
@@ -307,7 +307,7 @@ const supportNinjaPage = () => {
             </section>
           </div>
         </div>
-        <div className="bg-[#bfc1b9] ">
+        <div className="bg-[#bfc1b9]">
           <div className="mx-8 sm:mx-8 md:mx-15 lg:mx-22 xl:mx-30">
             <Footer />
           </div>

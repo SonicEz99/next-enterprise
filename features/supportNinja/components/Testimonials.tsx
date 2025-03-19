@@ -50,21 +50,26 @@ const TestimonialSlider: React.FC = () => {
   ]
 
   return (
-    <section className="mx-auto max-w-7xl ">
+    <section className="mx-auto max-w-7xl">
       <h2 className="mb-10 text-center font-serif text-5xl text-gray-800 md:text-5xl">Why our clients stick with us</h2>
 
       <div className="relative mx-auto max-w-7xl rounded-xl bg-[#f7e1d2] p-8 md:p-16">
-        
+        <div className="absolute left-0 top-0 w-16 h-16 overflow-hidden">
+          <div className="absolute w-32 h-32 border-t-2 border-l-2 border-[#bfc1b9] rounded-tl-[100px] -top-16 -left-16"></div>
+        </div>
+        <div className="absolute right-0 top-0 w-16 h-16 overflow-hidden">
+          <div className="absolute w-32 h-32 border-t-2 border-r-2 border-[#bfc1b9] rounded-tr-[100px] -top-16 -right-16"></div>
+        </div>
 
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <p className="mb-8 text-xl text-gray-700 italic font-semibold md:text-2xl">"{testimonials[currentIndex]!.quote}"</p>
+          <p className="mb-8 text-xl text-gray-700 italic font-semibold md:text-2xl">"{testimonials[currentIndex]?.quote}"</p>
           <div>
-            <p className="font-semibold text-gray-800">{testimonials[currentIndex]!.author}</p>
-            <p className="text-gray-600">{testimonials[currentIndex]!.title}</p>
+            <p className="font-semibold text-gray-800">{testimonials[currentIndex]?.author}</p>
+            <p className="text-gray-600">{testimonials[currentIndex]?.title}</p>
           </div>
         </div>
 
-        <div className=" flex  items-center justify-around md:flex-row">
+        <div className="flex items-center justify-around md:flex-row">
           <div className="mb-6 flex justify-center mt-8 gap-2 hidden sm:hidden md:flex lg:flex xl:flex">
             {testimonials.map((_, index) => (
               <button
@@ -74,7 +79,6 @@ const TestimonialSlider: React.FC = () => {
                 }`}
                 onClick={() => goToSpecificSlide(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
-                
               />
             ))}
           </div>
@@ -82,14 +86,14 @@ const TestimonialSlider: React.FC = () => {
           <div className="mx-auto flex overflow-hidden rounded-full bg-[#0c3a23] md:mx-0">
             <button
               onClick={goToPrevious}
-              className="cursor-pointer p-3  text-white transition-colors hover:text-[#edbc4f]"
+              className="cursor-pointer p-3 text-white transition-colors hover:text-[#edbc4f]"
               aria-label="Previous testimonial"
             >
               <ArrowLeft width={16} height={16} />
             </button>
             <button
               onClick={goToNext}
-              className="cursor-pointer p-3  text-white transition-colors hover:text-[#edbc4f]"
+              className="cursor-pointer p-3 text-white transition-colors hover:text-[#edbc4f]"
               aria-label="Next testimonial"
             >
               <ArrowRight width={16} height={16} />
